@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="yemek, tarif, yemek tarifleri" />
+    <title>Yemek Tarifleri</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: mediumslateblue">
+      <img
+        style="margin-bottom: 11px"
+        src="house-heart-fill.svg"
+        width="30"
+        height="30"
+        class="d-inline-block align-top"
+        alt="" />
+      <a
+        class="navbar-brand"
+        href="index.html"
+        style="margin-left: 5px; margin-bottom: 3px">
+        Anasayfa</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="biz-kimiz.html" style="margin-left: -7px"
+              >Biz Kimiz? <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="uye-olun.html">Üye Olun</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="iletişim.html">İletişim</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Yemekler, İçecekler"
+            aria-label="Search" />
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+            Ara
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb" style="background-color: white; margin-left: 2px">
+        <li
+          class="breadcrumb-item"
+          style="background-color: white; color: black">
+          Anasayfa
+        </li>
+        <li
+          class="breadcrumb-item active"
+          aria-current="page"
+          style="background-color: white; color: black">
+          İletişim
+        </li>
+      </ol>
+    </nav>
+    <div class="container">
+      <br />
+      <h4 style="margin-left: 15px">İletişim</h4>
+      <hr />
+      <br />
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading">
+            <div>
+              <i class="bi bi-geo-alt" style="margin-right: 7px"></i
+              ><span
+                ><span class="heavy-font">Adres: </span>Ahmet Taner Kışlalı Mah.
+                2866 Sok. No:29/C - 06810 &Uuml;mitk&ouml;y &Ccedil;ankaya -
+                Ankara</span
+              >
+              <br />
+              <i class="bi bi-telephone" style="margin-right: 7px"></i
+              ><span
+                ><span class="heavy-font">Telefon: </span>+90 312 240 54
+                53</span
+              >
+              <br />
+              <i class="bi bi-envelope" style="margin-right: 7px"></i
+              ><span
+                ><span class="heavy-font">E-Mail: </span
+                ><a href="mailto:info@chefakademi.com"
+                  >b211200060@yemektarifleri.com</a
+                ></span
+              >
+              <br />
+              <br />
+            </div>
+          </div>
+          <script
+            type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1vcU-05dtf1-9H79zJpcRS4aYePqRdok"></script>
+          <div
+            id="map_canvas1"
+            style="width: 100%; height: 350px; margin-bottom: 30px"
+            class="margin-top-30">
+            <script type="text/javascript">
+              function init_map1() {
+                var iconBase1 = "images/";
+                var myOptions1 = {
+                  zoom: 18,
+                  disableDefaultUI: true,
+                  center: new google.maps.LatLng(39.8711958, 32.680514),
+                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                };
+                map = new google.maps.Map(
+                  document.getElementById("map_canvas1"),
+                  myOptions1
+                );
+                marker = new google.maps.Marker({
+                  map: map,
+                  icon: iconBase1 + "marker.png",
+                  animation: google.maps.Animation.DROP,
+                  position: new google.maps.LatLng(39.8711958, 32.680514),
+                });
+                infowindow = new google.maps.InfoWindow({
+                  content: "<div class='noScroll'><b>Yemek Tarifleri</b></div>",
+                });
+                google.maps.event.addListener(marker, "click", function () {
+                  infowindow.open(map, marker);
+                });
+                infowindow.open(map, marker);
+              }
+              google.maps.event.addDomListener(window, "load", init_map1);
+            </script>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+    </div>
+  </body>
+</html>
