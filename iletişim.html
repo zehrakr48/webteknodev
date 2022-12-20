@@ -99,15 +99,14 @@
             <div>
               <i class="bi bi-geo-alt" style="margin-right: 7px"></i
               ><span
-                ><span class="heavy-font">Adres: </span>Ahmet Taner Kışlalı Mah.
-                2866 Sok. No:29/C - 06810 &Uuml;mitk&ouml;y &Ccedil;ankaya -
-                Ankara</span
+                ><span class="heavy-font">Adres: </span>Maslak Mahallesi,
+                100.yıl Sanayi Sitesi 52.Sk. No:12, 34485 Maslak -
+                Sarıyer/İstanbul, Türkiye</span
               >
               <br />
               <i class="bi bi-telephone" style="margin-right: 7px"></i
               ><span
-                ><span class="heavy-font">Telefon: </span>+90 312 240 54
-                53</span
+                ><span class="heavy-font">Telefon: </span>+90 212 258 8886</span
               >
               <br />
               <i class="bi bi-envelope" style="margin-right: 7px"></i
@@ -121,43 +120,20 @@
               <br />
             </div>
           </div>
-          <script
-            type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1vcU-05dtf1-9H79zJpcRS4aYePqRdok"></script>
-          <div
-            id="map_canvas1"
-            style="width: 100%; height: 350px; margin-bottom: 30px"
-            class="margin-top-30">
-            <script type="text/javascript">
-              function init_map1() {
-                var iconBase1 = "images/";
-                var myOptions1 = {
-                  zoom: 18,
-                  disableDefaultUI: true,
-                  center: new google.maps.LatLng(39.8711958, 32.680514),
-                  mapTypeId: google.maps.MapTypeId.ROADMAP,
-                };
-                map = new google.maps.Map(
-                  document.getElementById("map_canvas1"),
-                  myOptions1
-                );
-                marker = new google.maps.Marker({
-                  map: map,
-                  icon: iconBase1 + "marker.png",
-                  animation: google.maps.Animation.DROP,
-                  position: new google.maps.LatLng(39.8711958, 32.680514),
-                });
-                infowindow = new google.maps.InfoWindow({
-                  content: "<div class='noScroll'><b>Yemek Tarifleri</b></div>",
-                });
-                google.maps.event.addListener(marker, "click", function () {
-                  infowindow.open(map, marker);
-                });
-                infowindow.open(map, marker);
-              }
-              google.maps.event.addDomListener(window, "load", init_map1);
-            </script>
+          <!--          -->
+
+          <div class="row mt-4">
+            <div
+              class="col-lg-8"
+              style="width: 100%; height: 350px; margin-bottom: 30px">
+              <iframe
+                style="width: 100%; height: 350px; margin-bottom: 30px"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3005.753923864017!2d29.022926000000002!3d41.118065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4fafd9358f71f47a!2sChef's+Table+Mutfak+Akademisi!5e0!3m2!1str!2sus!4v1546259841442"
+                allowfullscreen=""></iframe>
+            </div>
           </div>
+
+          <!--  -->
         </div>
       </div>
       <!--  -->
